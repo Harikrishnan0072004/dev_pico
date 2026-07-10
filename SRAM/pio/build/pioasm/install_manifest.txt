@@ -1,0 +1,5 @@
+C:/Users/ishar/Desktop/pico_dev/SRAM/pio/build/pioasm-install/pioasm/pioasm.exe
+C:/Users/ishar/Desktop/pico_dev/SRAM/pio/build/pioasm-install/pioasm/pioasmTargets.cmake
+C:/Users/ishar/Desktop/pico_dev/SRAM/pio/build/pioasm-install/pioasm/pioasmTargets-release.cmake
+C:/Users/ishar/Desktop/pico_dev/SRAM/pio/build/pioasm-install/pioasm/pioasmConfig.cmake
+C:/Users/ishar/Desktop/pico_dev/SRAM/pio/build/pioasm-install/pioasm/pioasmConfigVersion.cmake
