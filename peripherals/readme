@@ -1,0 +1,10 @@
+This File consist ALL pico peripheral program - UART , SPI , I2C , PIO , GPIO ,KEYPAD/
+
+  * UART - uart0 and uar1 are used to  print a statement  and resive user  inpiut .  
+  * SPI -  USED For ili9341  - 3.4 TFT SPI 480x320 v1.0  display.another main.c is provided For  MOSI- MISO loopback testing.
+  * PIO - USED to  blink an  LED. 
+  * GPIO - USED  to Test GPIO LEDS
+  * i2c - USED  For lcd display with pcf8574 . 
+  * KEYPAD - 4X4 MATRIX keypad.
+   
+   
