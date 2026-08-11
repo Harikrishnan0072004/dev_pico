@@ -1,0 +1,18 @@
+.program test
+
+pull block
+mov y, osr
+
+.wrap_target
+    set pins, 1
+
+    mov x, y
+delay_high:
+    jmp x-- delay_high
+
+    set pins, 0
+
+    mov x, y
+delay_low:
+    jmp x-- delay_low
+.wrap
