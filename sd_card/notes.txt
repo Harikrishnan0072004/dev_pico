@@ -1,0 +1,47 @@
+SD-CARD protcols...
+spi -serial periberal interface 
+SDIO - secure digital input output - working - can use a 1-bit or 4 bit wide parallel data bus along with dedicated clock and command .
+in rpi pico we dont have this SDIO BUT  using rpi pico we can build that 
+
+SPI Mode Mapping (Alternative Protocol)When operated in Serial Peripheral Interface (SPI) mode, the 9 pads map to different control signals:
+Pin 1: CS – Chip Select (active low)
+Pin 2: DI – Data In (Host to Card)
+Pin 3: VSS – Ground
+Pin 4: VDD – Power Supply
+Pin 5: SCLK – Serial Clock
+Pin 6: VSS – Ground
+Pin 7: DO – Data Out (Card to Host)
+Pin 8: RSV – Reserved
+Pin 9: RSV – Reserved
+
+++ the XIP and fatfs involve accessing storage and reading data into the system! however both operating different !++
+fat file system - "file allocation table"
+what is cluster... 
+ 
+how sd card work ... how its talk to an sd card .. how the data blocks on the card 
+map library (FATFS)
+NEED OF BUFFER - the pico's week gpio signal are amplifier cleanly to 3.3v before they touch the sd card,
+
+30/7/2026
+command line is a text-based interface used to operate sofware ,
+
+shell is specialized program that act as outer most layer of an operating system,
+
+how to intilize the card?
+
+
+how sd card acccess start , read , write ?
+what is sector in sd card ,what is master boot record (mbr)
+
+What is sd layout? current folder structure , cluster sizes and sectror maps
+
+ ChaN's FatFs library WE USED.
+
+ComponentWhat it means physically inside the Pico
+f_mount(...) The function wakes up, takes control of the SPI lines, and sends electrical pulses to the SD card.
+
+null-terminator (\0)
+fr = f_mount(&fs, "0:", 1);
+Step 1: The Bare Essentials & Low-Level Mount
+Step 2: The Command Line Listener!
+Step 3: Building the String Command Slicer (strtok)! 

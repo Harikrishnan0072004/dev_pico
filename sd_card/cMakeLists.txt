@@ -1,0 +1,45 @@
+cmake_minimum_required(VERSION 3.13)
+
+# Disable the requirement for an external picotool binary to bypass path errors
+#set(PICO_NO_PICOTOOL 1)
+
+# Import the Pico SDK
+include(pico_sdk_import.cmake)
+
+#1.set SDK path (environment variable or explicity path )
+set(PICO_SDK_PATH "C:/Users/ishar/.pico-sdk/sdk/2.2.0")
+project(pico_sd_card_project C CXX ASM)
+# set(picotoolVersion 2.2.0-a4)
+set(picotool_DIR "C:/Users/ishar/.pico-sdk/picotool/2.2.0-a4/picotool" CACHE PATH "Path to picotool")
+set(CMAKE_C_STANDARD 11)
+set(CMAKE_CXX_STANDARD 17)
+
+# Initialize the Pico SDK
+pico_sdk_init()
+
+# Define our executable and its source files
+add_executable(sd_card_executable
+    main.c
+    hw_config.c
+    hw_config.h
+)
+
+# 컴� UPDATE THIS LINE BELOW 컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴
+# Point CMake directly to the subfolder that actually holds the CMakeLists.txt
+add_subdirectory(lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI)
+
+# 컴� UPDATE THIS LINE BELOW 컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴
+# Change the target library name to FatFs_SPI (the name defined by the author)
+target_link_libraries(sd_card_executable
+    pico_stdlib
+    hardware_spi
+    FatFs_SPI
+)
+
+# Enable USB and UART output for printf debugging
+pico_enable_stdio_usb(sd_card_executable 1)
+pico_enable_stdio_uart(sd_card_executable 1)
+
+# Generate the final .uf2 file for flashing
+pico_add_extra_outputs(sd_card_executable)
+

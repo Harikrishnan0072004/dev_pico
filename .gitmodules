@@ -1,0 +1,3 @@
+[submodule "sd_card/lib/no-OS-FatFS-SD-SPI-RPi-Pico"]
+	path = sd_card/lib/no-OS-FatFS-SD-SPI-RPi-Pico
+	url = https://github.com
